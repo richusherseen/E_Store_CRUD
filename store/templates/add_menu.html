@@ -1,0 +1,31 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>    
+</head>  
+<body>  
+    <div class="content-section">
+<form method="POST" class="post-form" action="/add-menu/{{store_id}}">  
+        {% csrf_token %}  
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Add New Menu</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Add</button>
+        
+        </div>
+    
+    
+</form>  
+</body>  
+</html>  
+
+
+
+
+
+
